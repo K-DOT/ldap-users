@@ -87,16 +87,15 @@ if __name__ == '__main__':
             username, password = get_username_pass()      
             create(username, password)
             if raw_input('Continue? [Y/n] ').lower() == 'n': break
-    elif len(sys.argv) == 2 and (sys.argv[1] == '-d' or sys.argv[1] == '--delete'):
+    elif len(sys.argv) == 2 and (flags['delete']):
         while True:
              username = raw_input('Username: ') 
              delete(username)
              print 'Deleted'
              if raw_input('Continue? [Y/n] ').lower() == 'n': break
-    elif len(sys.argv) == 2 and (sys.argv[1] == '-c' or sys.argv[1] == '--config'):
+    elif len(sys.argv) == 2 and (flags['create_from_config']):
         for (username, password) in get_username_pass_from_config():
             create(username, password)   
-    elif len(sys.argv) == 3 and (sys.argv[2] == '-d' or sys.argv[1] == '--delete') and \
-    (sys.argv[1] == '-c' or sys.argv[1] == '--config'):
+    elif len(sys.argv) == 3 and (flags['delete_from_config']):
         for (username, password) in get_username_pass_from_config():
             delete(username)          
