@@ -1,0 +1,13 @@
+dn: uid={username},ou={ou},dc={dc1},dc={dc2}
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: {username}
+uid: {username}
+uidNumber: {uid}
+gidNumber: 100
+homeDirectory: /home/{username}
+loginShell: /bin/bash
+gecos: {username}
+userPassword: {crypt}x

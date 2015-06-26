@@ -1,0 +1,16 @@
+# Global ldap settings
+[LDAP_SETTINGS]
+password = 
+cn = admin
+ou = users
+dc1 = example
+dc2 = com
+
+# Users
+[test1]
+username = test1
+password = qwerty
+
+[test2]
+username = test2
+password = qwerty
